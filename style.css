@@ -1,0 +1,284 @@
+body {
+    font-size: 1rem;
+    overflow-x: hidden;
+    transition: all .5s ease;
+}
+
+/* Loader styles */
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+    transition: all .5s ease;
+    background-color: rgb(239, 244, 253);
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.loader-inner {
+    text-transform: uppercase;
+}
+
+.spinner-border {
+    color: #915aff;
+}
+
+/* Loader styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.containerLeft {
+    display: flex;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #320a61;
+    min-width: 100px;
+    min-height: 100vh;
+}
+
+nav ul {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    margin: 5px 0px;
+}
+
+nav ul li:nth-child(1) {
+    margin: 0px;
+}
+
+nav ul li:hover img {
+    scale: 120%;
+}
+
+nav ul li a {
+    width: 100%;
+    height: 100%;
+}
+
+nav ul li a img {
+    display: block;
+    width: 100%;
+    height: 26px;
+    margin: 20px 0px;
+    transition: .2s ease;
+}
+
+nav ul li a img:hover {
+    scale: 120%;
+}
+
+.logo {
+    display: flex;
+    filter: grayscale(1);
+    filter: brightness(100);
+    width: 100px;
+    user-select: none;
+    margin: 0 auto;
+}
+
+.btnMobile {
+    display: none;
+}
+
+.containerMain {
+    width: 100%;
+}
+
+.containerMain h2 {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin: 0;
+    padding: 10px 0px;
+}
+
+.containerSection {
+    width: 100%;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    vertical-align: middle;
+}
+
+td {
+    font-size: 14px;
+}
+
+.moreInfo:hover::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: rgb(13, 110, 253, .2);
+    transform: translateX(-19px) translateY(2px);
+    box-shadow: 0 0 5px rgb(13, 110, 253, .5);
+    border-radius: 50%;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    padding: 10px;
+}
+
+form img {
+    position: absolute;
+    top: 35px;
+    right: 100px;
+    filter: invert(1);
+    height: 30px;
+    transform: translateY(-10px);
+}
+
+label {
+    margin-right: 5px;
+}
+
+button {
+    margin: 5px;
+}
+
+input,
+option {
+    font-size: 14px;
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+.infoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.containerObs {
+    display: flex;
+    width: 100%;
+}
+
+.containerObs label {
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+#obs {
+    min-height: 100px;
+}
+
+
+
+@media (max-width: 1200px) {
+    .containerLeft {
+        flex-direction: column;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        min-height: 60px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .containerMain {
+        padding-top: 60px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .btnMobile {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .btnMobile {
+        height: 60px;
+    }
+
+    .docCliente,
+    .ruaCliente,
+    .numCasaCliente,
+    .bairroCliente,
+    .cidadeCliente {
+        display: none;
+    }
+
+    form {
+        display: block;
+    }
+
+    form label {
+        display: block;
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    .infoContainer label {
+        width: 100%;
+        margin-right: 0;
+    }
+}
